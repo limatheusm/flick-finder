@@ -106,6 +106,9 @@
                             <constraint firstItem="gy4-dS-4Uc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o5x-lX-DtE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vGZ-kT-2gL" appends="YES" id="38G-mL-qWC"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="latLonSearchButton" destination="FVc-O3-4xg" id="2p2-lm-aae"/>
@@ -118,6 +121,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vGZ-kT-2gL">
+                    <connections>
+                        <action selector="userDidTapView:" destination="BYZ-38-t0r" id="uQY-aj-RaK"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
