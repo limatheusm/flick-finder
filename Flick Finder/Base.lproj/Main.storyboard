@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,116 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flick_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gy4-dS-4Uc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flick Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WL6-we-X2F">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4BC-Jb-uoG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AZ3-h6-0vK">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="449"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QLj-Fu-diX">
+                                        <rect key="frame" x="0.0" y="489" width="375" height="44"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter phrase" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Sy-nC-dsK" userLabel="Phrase Text Field">
+                                                <rect key="frame" x="8" y="8" width="303" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="HnY-N0-JrY"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbL-p1-pEu" userLabel="Phrase Search Button">
+                                                <rect key="frame" x="319" y="8" width="48" height="32"/>
+                                                <state key="normal" image="SearchIcon"/>
+                                                <connections>
+                                                    <action selector="searchByPhrase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eoi-cG-V3t"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="4" trailing="8"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fuu-4T-wjR">
+                                        <rect key="frame" x="0.0" y="533" width="375" height="44"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Latitude" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1Ud-NE-cRB">
+                                                <rect key="frame" x="8" y="4" width="147.5" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Longitude" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fOX-yO-fV9">
+                                                <rect key="frame" x="163.5" y="4" width="147.5" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVc-O3-4xg" userLabel="Phrase Search Button">
+                                                <rect key="frame" x="319" y="4" width="48" height="32"/>
+                                                <state key="normal" image="SearchIcon"/>
+                                                <connections>
+                                                    <action selector="searchByLatLon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lzx-Xy-Fpl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1Ud-NE-cRB" firstAttribute="width" secondItem="fOX-yO-fV9" secondAttribute="width" id="X2g-lr-XYh"/>
+                                        </constraints>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="4" leading="8" bottom="8" trailing="8"/>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCh-or-K1f" userLabel="Photo Title Label">
+                                        <rect key="frame" x="0.0" y="577" width="375" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="wQb-ei-7B7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1Ud-NE-cRB" firstAttribute="height" secondItem="9Sy-nC-dsK" secondAttribute="height" id="DWg-OD-7m3"/>
+                                    <constraint firstItem="fOX-yO-fV9" firstAttribute="height" secondItem="9Sy-nC-dsK" secondAttribute="height" id="WP9-cA-nhr"/>
+                                    <constraint firstItem="FVc-O3-4xg" firstAttribute="width" secondItem="LbL-p1-pEu" secondAttribute="width" id="kTt-d8-adI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gy4-dS-4Uc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LQz-IQ-0ud"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gy4-dS-4Uc" secondAttribute="bottom" id="T0I-So-prk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gy4-dS-4Uc" secondAttribute="trailing" id="ZYd-wd-AbU"/>
+                            <constraint firstItem="gy4-dS-4Uc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o5x-lX-DtE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="latLonSearchButton" destination="FVc-O3-4xg" id="2p2-lm-aae"/>
+                        <outlet property="latitudeTextField" destination="1Ud-NE-cRB" id="BoY-py-zQa"/>
+                        <outlet property="longitudeTextField" destination="fOX-yO-fV9" id="myd-Lk-8bn"/>
+                        <outlet property="photoImageView" destination="AZ3-h6-0vK" id="kB3-nx-jU7"/>
+                        <outlet property="photoTitleLable" destination="XCh-or-K1f" id="6NY-Yd-ush"/>
+                        <outlet property="phraseSearchButton" destination="LbL-p1-pEu" id="igV-9o-aHY"/>
+                        <outlet property="phraseTextField" destination="9Sy-nC-dsK" id="zwA-yj-dyE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SearchIcon" width="48" height="48"/>
+    </resources>
 </document>
