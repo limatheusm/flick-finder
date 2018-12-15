@@ -1,4 +1,4 @@
 # Flick Finder
 Find any image you want by text or lat/long.
 
-iOS application developed during Udacity Nanodegree developer iOS
+iOS application for Udacity Nanodegree iOS developer course
