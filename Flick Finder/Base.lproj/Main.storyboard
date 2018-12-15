@@ -26,50 +26,60 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="4BC-Jb-uoG"/>
                                         </constraints>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="16" trailing="8"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AZ3-h6-0vK">
-                                        <rect key="frame" x="0.0" y="40" width="375" height="449"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AZ3-h6-0vK">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="433"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCh-or-K1f" userLabel="Photo Title Label">
+                                        <rect key="frame" x="0.0" y="473" width="375" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="wQb-ei-7B7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QLj-Fu-diX">
-                                        <rect key="frame" x="0.0" y="489" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="543" width="375" height="48"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter phrase" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Sy-nC-dsK" userLabel="Phrase Text Field">
-                                                <rect key="frame" x="8" y="8" width="303" height="32"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter phrase" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9Sy-nC-dsK" userLabel="Phrase Text Field">
+                                                <rect key="frame" x="16" y="8" width="287" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="HnY-N0-JrY"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                             </textField>
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbL-p1-pEu" userLabel="Phrase Search Button">
-                                                <rect key="frame" x="319" y="8" width="48" height="32"/>
+                                                <rect key="frame" x="311" y="8" width="48" height="32"/>
                                                 <state key="normal" image="SearchIcon"/>
                                                 <connections>
                                                     <action selector="searchByPhrase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eoi-cG-V3t"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="4" trailing="8"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="16" bottom="8" trailing="16"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fuu-4T-wjR">
-                                        <rect key="frame" x="0.0" y="533" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="591" width="375" height="56"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Latitude" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1Ud-NE-cRB">
-                                                <rect key="frame" x="8" y="4" width="147.5" height="32"/>
+                                                <rect key="frame" x="16" y="8" width="139.5" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Longitude" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fOX-yO-fV9">
-                                                <rect key="frame" x="163.5" y="4" width="147.5" height="32"/>
+                                                <rect key="frame" x="163.5" y="8" width="139.5" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVc-O3-4xg" userLabel="Phrase Search Button">
-                                                <rect key="frame" x="319" y="4" width="48" height="32"/>
+                                                <rect key="frame" x="311" y="8" width="48" height="32"/>
                                                 <state key="normal" image="SearchIcon"/>
                                                 <connections>
                                                     <action selector="searchByLatLon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lzx-Xy-Fpl"/>
@@ -79,17 +89,8 @@
                                         <constraints>
                                             <constraint firstItem="1Ud-NE-cRB" firstAttribute="width" secondItem="fOX-yO-fV9" secondAttribute="width" id="X2g-lr-XYh"/>
                                         </constraints>
-                                        <directionalEdgeInsets key="directionalLayoutMargins" top="4" leading="8" bottom="8" trailing="8"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="16" bottom="16" trailing="16"/>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCh-or-K1f" userLabel="Photo Title Label">
-                                        <rect key="frame" x="0.0" y="577" width="375" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="wQb-ei-7B7"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="1Ud-NE-cRB" firstAttribute="height" secondItem="9Sy-nC-dsK" secondAttribute="height" id="DWg-OD-7m3"/>
@@ -115,7 +116,7 @@
                         <outlet property="latitudeTextField" destination="1Ud-NE-cRB" id="BoY-py-zQa"/>
                         <outlet property="longitudeTextField" destination="fOX-yO-fV9" id="myd-Lk-8bn"/>
                         <outlet property="photoImageView" destination="AZ3-h6-0vK" id="kB3-nx-jU7"/>
-                        <outlet property="photoTitleLable" destination="XCh-or-K1f" id="6NY-Yd-ush"/>
+                        <outlet property="photoTitleLabel" destination="XCh-or-K1f" id="Ah2-ge-Wie"/>
                         <outlet property="phraseSearchButton" destination="LbL-p1-pEu" id="igV-9o-aHY"/>
                         <outlet property="phraseTextField" destination="9Sy-nC-dsK" id="zwA-yj-dyE"/>
                     </connections>
